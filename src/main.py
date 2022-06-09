@@ -106,6 +106,7 @@ class GCPStatusCollector(object):
             return 2
         elif incident['severity'] == 'medium':
             return 1
+        return 0
 
     def incident_handler(self, incident, metric):
         incident_severity = self.severity_handler(incident)
